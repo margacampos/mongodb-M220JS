@@ -47,7 +47,7 @@ export default class CommentsController {
       const commentId = req.body.comment_id
       const text = req.body.updated_comment
       const date = new Date()
-
+      console.log(user.email, text, commentId)
       const commentResponse = await CommentsDAO.updateComment(
         ObjectId(commentId),
         user.email,
